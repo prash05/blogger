@@ -3,5 +3,9 @@ Rails.application.routes.draw do
   # see https://guides.rubyonrails.org/routing.html
   root to: 'articles#index'
 
- resources :articles
+
+ resources :articles do
+  resources :comments
+end
+resources :tags
 end
